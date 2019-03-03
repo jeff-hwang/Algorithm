@@ -13,13 +13,3 @@ for i in iData:
     if 'A'<=i[0] and 'Z'>=i[0]:
         ln = len(i)
         print(i[0]+i[ln-1])
-
-'''
-try:
-    int(iData)
-    pass
-except Exception:
-    print(iData[0]+iData[iDataLen-1])
-'''
-
-
