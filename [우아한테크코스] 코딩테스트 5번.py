@@ -1,3 +1,6 @@
+# 369 게임
+# 숫자 중 3 6 9 가 나온 갯수만큼 박수를 친다
+
 def solution(number):
     answer = 0
     
@@ -12,7 +15,6 @@ def solution(number):
                 
             if j == '9':
                 answer+=1            
-                
     return answer
 
 print(solution(33))

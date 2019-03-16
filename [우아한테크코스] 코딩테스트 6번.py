@@ -18,8 +18,6 @@ def solution(totalTicket, logs):
     minTime = datetime.datetime.strptime("09:00:00","%H:%M:%S")
     maxTime = datetime.datetime.strptime("10:00:00","%H:%M:%S")
     
-    
-    
     for i in logs:
         
         lst = i.split(' ')        
