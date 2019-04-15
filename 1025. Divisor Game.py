@@ -5,7 +5,7 @@ class Solution(object):
         :rtype: bool
         """
         
-        if N %2==0:
+        if N %2 == 0:
             return True
         else :
             return False
