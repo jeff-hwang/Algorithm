@@ -4,6 +4,8 @@ class Solution(object):
         :type N: int
         :rtype: int
         """
+        if int(N) == 0:
+            return 1
         bin = ""
         while N > 0 :
             bin += str(N % 2)
@@ -14,7 +16,7 @@ class Solution(object):
         #bin = reversed(bin)
         res = ""
         
-        
+        #pyint autopep8
         for i in bin:
             if i == "1":
                 res += "0"
