@@ -4,15 +4,25 @@ import (
 	"fmt"
 )
 
+var dp [1002]uint64
+
 func main() {
 	var data int
 	fmt.Scanln(&data)
-	fmt.Println(fillTile(data))
+	/*
+		dp[0] = 1
+		dp[1] = 3
+		dp[2] = 5
+		for i := 3; i <= data; i++ {
+			dp[i] = dp[i-1] + (2 * dp[i-2])
+		}
+		res := dp[data-1] % 10007
+		fmt.Println(res)
+	*/
+	fmt.Println(fillTile(data) % 10007)
 }
 
-var dp [1000]int
-
-func fillTile(N int) int {
+func fillTile(N int) uint64 {
 	/*
 		2xn 직사각형을 2*1 2*2 타일로 채우는 방법
 	*/
@@ -28,15 +38,9 @@ func fillTile(N int) int {
 	} else if N == 3 {
 		dp[2] = 5
 		return dp[2]
-	} else if N == 4 {
-		dp[3] = 11
 	}
 
-	if (N+1)%2 == 0 {
-		dp[N-1] = fillTile(N-1) + fillTile(N-2) + 3
-	} else {
-		dp[N-1] = fillTile(N-1) + fillTile(N-2) + 1
-	}
+	dp[N-1] = fillTile(N-2)*2 + fillTile(N-1)
 
 	return dp[N-1]
 }
