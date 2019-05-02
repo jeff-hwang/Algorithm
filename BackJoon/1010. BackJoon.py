@@ -15,9 +15,7 @@ for i in range(2,31):
     
 for i in arr:
     print(ft[i[1]][i[0]])
-    
-
-        
+       
 
     
 
