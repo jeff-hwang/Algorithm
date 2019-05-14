@@ -22,7 +22,6 @@ def solution(phone_book):
     return True
 
 if __name__ == "__main__":
-
     phone_book = ["911", "97625999", "91125426"]
     s = solution(phone_book)
     print(s)

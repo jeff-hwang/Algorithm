@@ -1,5 +1,4 @@
 def solution(triangle):
-    answer = 0
     triSize = len(triangle) # 삼각형 배열의 사이즈
     dp = [[0 for j in range(i+1)] for i in range(triSize)] # 각 경로의 최대 값을 저장해놓을 배열
     dp[0][0] = triangle[0][0] # 높이가 1 일 때는 경우의 수가 1개뿐
