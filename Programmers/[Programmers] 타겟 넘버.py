@@ -12,7 +12,7 @@ def solution(numbers, target):
     
 
 def targetDFS(numbers, index):
-    if index <len(numbers):
+    if index < len(numbers):
         numbers[index] *= 1        
         targetDFS(numbers, index+1)
 
