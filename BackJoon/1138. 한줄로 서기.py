@@ -1,10 +1,16 @@
+import sys
 N = int(input())
 mans = list(map(int, input().split()))
 
-dic = {}
+res = []
 for i in range(N-1, -1, -1):
-    dic[mans[i]] = i+1
-print(dic)
+    res.insert(mans[i], i+1)
+
+for i in range(N):
+    if i != N-1:
+        sys.stdout.write(str(res[i])+" ")
+    else:
+        sys.stdout.write(str(res[i]))
 '''
 for i in range(N):
     if i != N-1:
